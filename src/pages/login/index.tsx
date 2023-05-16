@@ -27,7 +27,7 @@ const Login = () => {
       if (loginResp.success) {
         setStorage('token', (loginResp.data as LoginResp).token)
         setLoading(false)
-        navigate('/')
+        navigate('/home')
       } else {
         setLoading(false)
         if (loginResp.error) {
