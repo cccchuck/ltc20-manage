@@ -16,7 +16,7 @@ const Option = Select.Option
 
 import { type Orders } from '@/apis/getAllOrders'
 import { ServerResponse } from '@/types'
-import { removeStorage } from '@/utils/storage'
+import { getStorage, removeStorage } from '@/utils/storage'
 import { useNavigate } from 'react-router-dom'
 import { formatDate } from '@/utils'
 import delOrder from '@/apis/delOrder'
@@ -296,6 +296,14 @@ const Home = () => {
       }
     }
   }
+
+  useEffect(() => {
+    const token = getStorage('token')
+    console.log(token)
+    if (!token) {
+      navigate('/login')
+    }
+  }, [navigate])
 
   useEffect(() => {
     const _handleFetchOrders = async () => {
