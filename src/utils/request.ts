@@ -82,7 +82,7 @@ class Request {
 }
 
 export const request = new Request({
-  baseURL: 'https:/api.ltc20.club/',
+  baseURL: 'https://api.ltc20.club/',
   timeout: 5000,
 })
 
