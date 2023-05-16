@@ -1,0 +1,29 @@
+.home-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    .info {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+  }
+
+  .content {
+    margin-top: 1.34em;
+
+    .buy {
+      font-weight: bold;
+      color: green;
+    }
+
+    .sell {
+      font-weight: bold;
+      color: red;
+    }
+  }
+}
